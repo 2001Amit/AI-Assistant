@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./Bg_img.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.container {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(30, 30, 30, 0.8));
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 12%; /* Keeps it near the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.container h1 {
+    font-size: 40px; /* Corrected */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+
+#listen-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(50, 50, 50, 0.8));
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    outline: none;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+
+
+/* Smooth Hover Effect */
+.listen-btn:hover {
+    background: linear-gradient(135deg, rgba(35, 35, 35, 0.9), rgba(15, 15, 15, 0.9));
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Click Effect */
+.listen-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+/* Hover Effect */
+.listen-btn:hover {
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.9), rgba(10, 10, 10, 0.9));
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Hover Effect on Mic Icon */
+.listen-btn:hover::before {
+    transform: rotate(15deg) scale(1.2);
+}
+
+/* Click Effect */
+.listen-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
